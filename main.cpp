@@ -28,7 +28,6 @@ int main() {
     for (auto& c : commands) ac.insert(c);
 
     std::string input = "";
-    std::cout << "--- GitHub Lite with Auto-complete ---\n";
 
     while (true) {
         // \r moves cursor to start of line, std::flush ensures immediate print
@@ -39,12 +38,7 @@ int main() {
         if (c == '\n') { // ENTER
             std::cout << "\n";
             if (input == "exit") break;
-            // logic to parse input (e.g., gh.mkdir, gh.ls, etc.)
-            // ... (Insert your existing if/else command logic here) ...
             
-            // After creating a file/folder, add it to AC:
-            // ac.insert(new_name); 
-
             input = ""; 
         } 
         else if (c == 9) { // TAB
